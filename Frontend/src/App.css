@@ -1,0 +1,21 @@
+.swiper-button-prev,
+.swiper-button-next {
+  color: black; /* Change the color of the arrows */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: gray; /* Change color on hover if desired */
+}
+
+.swiper-button-prev{
+  /* background-color: white;
+  border-radius: 25px 0px 0px 25px; */
+  margin-left: -10px;
+}
+
+.swiper-button-next {
+  /* background-color: white;
+  border-radius: 0px 25px 25px 0px; */
+  margin-right: -10px;
+}
