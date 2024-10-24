@@ -19,12 +19,12 @@ const Checkout = () => {
           <ul className="space-y-8">
             <li
               className={`flex items-center text-sm p-4 ${
-                step == 1 ? "text-black bg-white" : "text-gray-500 bg-[#1c1c1c]"
+                step == 1 ? "text-black bg-white" : "text-white bg-[#1c1c1c]"
               }`}
             >
               <div
                 className={`px-[0.4rem] border rounded-full ${
-                  step == 1 ? "border-black" : "border-gray-500"
+                  step == 1 ? "border-black" : "border-white"
                 }`}
               >
                 <span>1</span>
@@ -36,12 +36,12 @@ const Checkout = () => {
 
             <li
               className={`flex items-center text-sm p-4 ${
-                step == 2 ? "text-black bg-white" : "text-gray-500 bg-[#1c1c1c]"
+                step == 2 ? "text-black bg-white" : "text-white bg-[#1c1c1c]"
               }`}
             >
               <div
                 className={`px-[0.4rem] border rounded-full ${
-                  step == 2 ? "border-black" : "border-gray-500"
+                  step == 2 ? "border-black" : "border-white"
                 }`}
               >
                 <span>2</span>
@@ -53,12 +53,12 @@ const Checkout = () => {
 
             <li
               className={`flex items-center text-sm p-4 ${
-                step == 3 ? "text-black bg-white" : "text-gray-500 bg-[#1c1c1c]"
+                step == 3 ? "text-black bg-white" : "text-white bg-[#1c1c1c]"
               }`}
             >
               <div
                 className={`px-[0.4rem] border rounded-full ${
-                  step == 3 ? "border-black" : "border-gray-500"
+                  step == 3 ? "border-black" : "border-white"
                 }`}
               >
                 <span>3</span>

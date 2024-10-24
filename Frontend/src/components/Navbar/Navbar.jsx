@@ -13,6 +13,7 @@ const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isFlowersDropdownOpen, setFlowersDropdownOpen] = useState(false);
   const [isPlantsDropdownOpen, setPlantsDropdownOpen] = useState(false);
+  const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -25,6 +26,11 @@ const Navbar = () => {
   const togglePlantsDropdown = () => {
     setPlantsDropdownOpen(!isPlantsDropdownOpen);
   };
+
+  const toggleProfileDropdown = () => {
+    setProfileDropdownOpen(!isProfileDropdownOpen);
+  };
+
 
   return (
     <div>
@@ -123,7 +129,31 @@ const Navbar = () => {
             </span>
           </div>
 
-          <AiOutlineUser className="h-6 w-6 text-gray-600 hover:text-gray-900" />
+           {/* Profile Icon with Dropdown */}
+           <div className="relative">
+            <AiOutlineUser
+              className="h-6 w-6 text-gray-600 hover:text-gray-900 cursor-pointer"
+              onClick={toggleProfileDropdown} // Toggle on click
+            />
+            {isProfileDropdownOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-lg z-10">
+                <ul className="py-2 text-sm tracking-wider">
+                  <li className="px-4 py-2 hover:bg-gray-100">
+                    <a href="#">Profile</a>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100">
+                    <a href="#">My Orders</a>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100">
+                    <a href="#">Order History</a>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100">
+                    <a href="#">Sign Out</a>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
       </nav>
 
