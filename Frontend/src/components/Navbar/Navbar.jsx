@@ -31,7 +31,6 @@ const Navbar = () => {
     setProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
-
   return (
     <div>
       {/* Main Navbar */}
@@ -47,31 +46,31 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-8 text-[0.7rem] tracking-wider">
           <a
             href="#"
-            className="text-gray-600 hover:text-gray-900 font-semibold"
+            className="menu-link text-gray-600 hover:text-gray-900 font-semibold"
           >
             Flowers
           </a>
           <a
             href="#"
-            className="text-gray-600 hover:text-gray-900 font-semibold"
+            className="menu-link text-gray-600 hover:text-gray-900 font-semibold"
           >
             Plants
           </a>
           <a
             href="#"
-            className="text-gray-600 hover:text-gray-900 font-semibold"
+            className="menu-link text-gray-600 hover:text-gray-900 font-semibold"
           >
             Wedding
           </a>
           <a
             href="#"
-            className="text-gray-600 hover:text-gray-900 font-semibold"
+            className="menu-link text-gray-600 hover:text-gray-900 font-semibold"
           >
             Anniversary
           </a>
           <a
             href="#"
-            className="text-gray-600 hover:text-gray-900 font-semibold"
+            className="menu-link text-gray-600 hover:text-gray-900 font-semibold"
           >
             Birthday
           </a>
@@ -129,8 +128,8 @@ const Navbar = () => {
             </span>
           </div>
 
-           {/* Profile Icon with Dropdown */}
-           <div className="relative">
+          {/* Profile Icon with Dropdown */}
+          <div className="relative">
             <AiOutlineUser
               className="h-6 w-6 text-gray-600 hover:text-gray-900 cursor-pointer"
               onClick={toggleProfileDropdown} // Toggle on click

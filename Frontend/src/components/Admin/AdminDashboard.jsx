@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaUserCircle, FaCog } from 'react-icons/fa'; // Importing icons for profile and settings
+import { IoIosLogOut } from "react-icons/io";
 import Sidebar from './Sidebar';
 import DashboardOverview from './DashboardOverview';
 import ProductManagement from './ProductManagement';
@@ -8,6 +9,7 @@ import TelecallerManagement from './TelecallerManagement';
 import ReportsAnalytics from './ReportsAnalytics';
 import UserRoleManagement from './UserRoleManagement';
 import NotificationsAlerts from './NotificationsAlerts';
+import AdminProfile from './AdminProfile';
 
 const AdminDashboard = () => {
   const [activeSection, setActiveSection] = useState('Overview');
@@ -28,6 +30,8 @@ const AdminDashboard = () => {
         return <UserRoleManagement />;
       case 'Notifications':
         return <NotificationsAlerts />;
+      case 'Profile': // Add a case for the Profile section
+        return <AdminProfile />;
       default:
         return <DashboardOverview />;
     }
@@ -53,13 +57,13 @@ const AdminDashboard = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-1 cursor-pointer">
+            <div className="flex items-center space-x-1 cursor-pointer" onClick={() => setActiveSection('Profile')}>
               <FaUserCircle className="text-2xl" title="Profile" />
               <span className="text-md">Profile</span>
             </div>
             <div className="flex items-center space-x-1 cursor-pointer">
-              <FaCog className="text-xl" title="Settings" />
-              <span className="text-md">Settings</span>
+              <IoIosLogOut className="text-xl" title="Settings" />
+              <span className="text-md">Logout</span>
             </div>
           </div>
         </header>
